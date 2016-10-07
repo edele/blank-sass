@@ -1,0 +1,27 @@
+{
+  "name": "blank-sass",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:styles": "node-sass ./styles/styles.scss | postcss --config ./configs/postcss.json | csso --output ./build/styles.css",
+    "watch:styles": "chokidar \"./styles/**/*.scss\" --command \"npm run build:styles\" --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edele/blank-sass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edele/blank-sass/issues"
+  },
+  "homepage": "https://github.com/edele/blank-sass#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "chokidar-cli": "^1.2.0",
+    "csso": "^2.2.1",
+    "node-sass": "^3.10.1",
+    "postcss-cli": "^2.6.0"
+  }
+}
